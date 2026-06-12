@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://demo-cappes-pasteleria.vercel.app/sitemap.xml
+Sitemap: https://cappes-demo.vercel.app/sitemap.xml

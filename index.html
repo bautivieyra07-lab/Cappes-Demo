@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es-AR" prefix="og: https://ogp.me/ns#">
 <head>
 <meta charset="UTF-8">
@@ -17,16 +17,16 @@
 <meta name="geo.position" content="-32.9595;-60.6262">
 <meta name="ICBM" content="-32.9595, -60.6262">
 
-<link rel="canonical" href="https://demo-cappes-pasteleria.vercel.app/">
-<link rel="alternate" hreflang="es-AR" href="https://demo-cappes-pasteleria.vercel.app/">
+<link rel="canonical" href="https://cappes-demo.vercel.app/">
+<link rel="alternate" hreflang="es-AR" href="https://cappes-demo.vercel.app/">
 
 <meta property="og:type" content="business.business">
 <meta property="og:title" content="Cappe's — Pastelería artesanal en Barrio Martin, Rosario">
 <meta property="og:description" content="Los clásicos de siempre, hechos como se debe. Medialunas, key lime pie, roll de canela y café de especialidad. Encargá por WhatsApp y retirá por Av. de la Libertad 169.">
-<meta property="og:url" content="https://demo-cappes-pasteleria.vercel.app/">
+<meta property="og:url" content="https://cappes-demo.vercel.app/">
 <meta property="og:site_name" content="Cappe's Pastelería">
 <meta property="og:locale" content="es_AR">
-<meta property="og:image" content="og.png">
+<meta property="og:image" content="https://cappes-demo.vercel.app/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Cappe's — Pastelería artesanal en Barrio Martin, Rosario">
@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Cappe's — Pastelería artesanal en Barrio Martin, Rosario">
 <meta name="twitter:description" content="Los clásicos de siempre, hechos como se debe. Encargá por WhatsApp.">
-<meta name="twitter:image" content="og.png">
+<meta name="twitter:image" content="https://cappes-demo.vercel.app/og.png">
 <meta name="twitter:image:alt" content="Cappe's — Pastelería artesanal en Barrio Martin, Rosario">
 
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23231507'/%3E%3Ctext x='50' y='73' font-family='Georgia,serif' font-size='60' fill='%23F4ECDD' text-anchor='middle' font-weight='bold'%3EC%3C/text%3E%3C/svg%3E">
@@ -53,13 +53,13 @@
 {
   "@context": "https://schema.org",
   "@type": "Bakery",
-  "@id": "https://demo-cappes-pasteleria.vercel.app/#bakery",
+  "@id": "https://cappes-demo.vercel.app/#bakery",
   "name": "Cappe's Pastelería",
   "alternateName": "Cappes Pasteleria",
   "description": "Pastelería artesanal en Barrio Martin, Rosario. Recetas clásicas reformuladas con materia prima de primera calidad: medialunas, key lime pie, lemon pie, roll de canela, stollen y café de especialidad. Modalidad take away.",
-  "image": "https://demo-cappes-pasteleria.vercel.app/og.png",
-  "logo": "https://demo-cappes-pasteleria.vercel.app/og.png",
-  "url": "https://demo-cappes-pasteleria.vercel.app/",
+  "image": "https://cappes-demo.vercel.app/og.png",
+  "logo": "https://cappes-demo.vercel.app/og.png",
+  "url": "https://cappes-demo.vercel.app/",
   "telephone": "+5493413753222",
   "priceRange": "$$",
   "currenciesAccepted": "ARS",
@@ -540,8 +540,10 @@
   .footer-word { font-family: var(--serif); font-weight: 500; text-align: center; line-height: 0.78; font-size: clamp(96px, 21vw, 320px); letter-spacing: -0.04em; color: transparent; -webkit-text-stroke: 1px rgba(244, 236, 221, 0.18); user-select: none; padding: 16px 0 0; transform: translateY(20%); }
 
   /* ============ WHATSAPP FLOAT ============ */
-  .wa-float { position: fixed; bottom: 22px; right: 22px; z-index: 6000; width: 60px; height: 60px; border-radius: 50%; background: #25D366; color: #FFF; display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 30px -8px rgba(37, 211, 102, 0.55); transition: transform 0.25s var(--ease); }
+  .wa-float { position: fixed; bottom: 22px; right: 22px; z-index: 6000; width: 60px; height: 60px; border-radius: 50%; background: #25D366; color: #FFF; display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 30px -8px rgba(37, 211, 102, 0.55); transition: transform 0.35s var(--ease), opacity 0.35s ease; }
   .wa-float:hover { transform: scale(1.08); }
+  /* escondido sobre el hero (ahí ya está el sello "Pedir ahora"); aparece al scrollear */
+  .wa-float.tuck { opacity: 0; transform: scale(0.4); pointer-events: none; }
   .wa-float::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid #25D366; animation: waPulse 2s ease-out infinite; }
   @keyframes waPulse { 0% { transform: scale(1); opacity: 0.5; } 100% { transform: scale(1.6); opacity: 0; } }
 
@@ -612,7 +614,7 @@
   <div class="hero-shade" id="heroShade" aria-hidden="true"></div>
   <div class="hero-ghost" id="heroGhost" aria-hidden="true">Cappe's</div>
   <div class="hero-inner" id="heroInner">
-    <p class="hero-eyebrow" id="heroEyebrow">Pastelería artesanal — Barrio Martin, Rosario</p>
+    <p class="hero-eyebrow" id="heroEyebrow">Pastelería artesanal — <span style="white-space:nowrap">Barrio Martin, Rosario</span></p>
     <h1 class="hero-title">
       <span class="line"><span class="line-in">Los clásicos</span></span>
       <span class="line"><span class="line-in">de siempre,</span></span>
@@ -1033,6 +1035,7 @@
   /* ---------- Nav ---------- */
   var nav = document.getElementById('nav');
   var progress = document.getElementById('progress');
+  var waFloat = document.querySelector('.wa-float');
   var lastY = 0;
   function onScroll() {
     var y = window.scrollY;
@@ -1042,6 +1045,8 @@
     lastY = y;
     var max = document.documentElement.scrollHeight - window.innerHeight;
     progress.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+    /* el botón verde se esconde sobre el hero (donde ya está el sello) y aparece después */
+    if (waFloat) waFloat.classList.toggle('tuck', y < window.innerHeight * 0.7);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
