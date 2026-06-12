@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://demo-cappes-pasteleria.vercel.app/sitemap.xml
